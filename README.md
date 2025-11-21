@@ -2,10 +2,15 @@
 
 # Fake News Detection with DistilBERT & Streamlit
 
-A complete end-to-end fake news detection system that combines a fine-tuned DistilBERT text classifier with a lightweight Streamlit web app and an optional K-Means clustering module for topic exploration. :contentReference[oaicite:0]{index=0}  
+Fake News Detector-Hugging Face LLM Fine-Tuned (DistilBERT) + Streamlit (AWS EC2, Docker)
+Built a lightweight web app that classifies news as real (0) or fake (1) using a Hugging Face fine-tuned LLM (DistilBERT). Trained with the Transformers Trainer on FakeNewsNet (BuzzFeed + PolitiFact), then served via Streamlit with calibrated probabilities and a threshold slider. Added topic clustering (K-Means on embeddings) for interpretability. Deployed as a Docker container on AWS EC2.
+ • LLM: DistilBERT, fine-tuned with Hugging Face Transformers
+ • Data: 432 labeled articles (FakeNewsNet)
+ • Results: ~0.76 accuracy, 0.77 weighted F1 (hold-out)
+ • Features: real-time predictions, FAKE/REAL badge, interpretable probabilities, topic clusters
+ • Stack: Python, PyTorch/Transformers (HF), scikit-learn, Streamlit, Docker, AWS EC2
 
-The app takes a news headline and body text as input and returns calibrated probabilities for **real (0)** vs **fake (1)** along with an adjustable decision threshold. It is designed for journalists, educators, fact-checkers, and general users who want a quick credibility signal in the browser.
-
+Web app link : http://3.27.201.8:8501/
 ---
 
 ## Features
@@ -36,6 +41,7 @@ Given a short **headline** and **body text**, the system:
 A secondary pipeline encodes the same text into embeddings and applies **K-Means** clustering (K≈5–10) to examine topical structure and how fake vs real news are distributed across clusters. :contentReference[oaicite:1]{index=1}  
 
 ---
+<img width="845" height="498" alt="image" src="https://github.com/user-attachments/assets/e4bd4f25-64ce-4062-b254-7dc105e6f776" />
 
 ![04](https://github.com/user-attachments/assets/810ff94d-478c-4403-89b1-71cf0a04e486)
 
@@ -59,5 +65,6 @@ A secondary pipeline encodes the same text into embeddings and applies **K-Means
 
 The final cleaned dataset (after filtering) is saved as something like:
 
-```text
-data/final_fake_news_dataset.csv
+<img width="639" height="452" alt="image" src="https://github.com/user-attachments/assets/cdbe8c20-923e-428b-bbc5-5d26b68195da" />
+
+<img width="579" height="424" alt="image" src="https://github.com/user-attachments/assets/8a563341-6951-4991-bb68-719ec4cca629" />
