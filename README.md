@@ -57,4 +57,6 @@ A secondary pipeline encodes the same text into embeddings and applies **K-Means
 The final cleaned dataset (after filtering) is saved as something like:
 
 ```text
-data/final_fake_news_dataset_clean.csv
+data/final_fake_news_dataset.csv
+
+![04](https://github.com/user-attachments/assets/f23a7505-c767-49b5-93e8-ba1b0a9bb642)
