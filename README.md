@@ -61,5 +61,3 @@ The final cleaned dataset (after filtering) is saved as something like:
 
 ```text
 data/final_fake_news_dataset.csv
-
-
