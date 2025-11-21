@@ -37,6 +37,9 @@ A secondary pipeline encodes the same text into embeddings and applies **K-Means
 
 ---
 
+![04](https://github.com/user-attachments/assets/810ff94d-478c-4403-89b1-71cf0a04e486)
+
+
 ## Dataset
 
 - **Source:** FakeNewsNet (BuzzFeed & PolitiFact splits) via Kaggle. :contentReference[oaicite:2]{index=2}  
@@ -58,8 +61,5 @@ The final cleaned dataset (after filtering) is saved as something like:
 
 ```text
 data/final_fake_news_dataset.csv
-```text
 
-
-![04](https://github.com/user-attachments/assets/2f3b22bb-cbc7-498e-954f-7367af5c83cb)
 
