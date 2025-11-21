@@ -1,0 +1,13 @@
+# Large model + training files
+project/news_model/model.safetensors
+project/news_model/training_args.bin
+
+# (optional) ignore whole model folder
+# project/news_model/
+
+# Large datasets (optional)
+# Dataset/
+
+# Large binaries
+*.safetensors
+*.bin
